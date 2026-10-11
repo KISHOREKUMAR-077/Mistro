@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Segoe UI, sans-serif;
+    overflow-x: hidden;
+    background: #0f172a;
+}
+
+
+/* Navbar */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.logo {
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+.navbar li {
+    color: white;
+    cursor: pointer;
+}
+
+.nav-btn {
+    background: #F97316;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+
+/* Hero */
+
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: linear-gradient( 135deg, #0f172a, #1E3A8A, #2563eb);
+}
+
+.hero-content {
+    text-align: center;
+    max-width: 850px;
+    z-index: 10;
+}
+
+.hero h1 {
+    color: white;
+    font-size: 6rem;
+    line-height: 1.1;
+}
+
+.hero p {
+    color: #dbeafe;
+    font-size: 1.3rem;
+    margin-top: 25px;
+    line-height: 1.8;
+}
+
+.hero-buttons {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.primary-btn {
+    background: #F97316;
+    color: white;
+    border: none;
+    padding: 18px 40px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.secondary-btn {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 18px 40px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+
+/* Glow */
+
+.hero-glow {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: #3b82f6;
+    filter: blur(200px);
+    opacity: .35;
+    border-radius: 50%;
+}
+
+
+/* Floating Tools */
+
+.tool {
+    position: absolute;
+    color: #60a5fa;
+    font-size: 60px;
+    opacity: .3;
+}
+
+.tool1 {
+    left: 10%;
+    top: 20%;
+    animation: float 5s infinite;
+}
+
+.tool2 {
+    right: 15%;
+    top: 30%;
+    animation: float 7s infinite;
+}
+
+.tool3 {
+    left: 20%;
+    bottom: 15%;
+    animation: float 6s infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-25px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+/* Responsive */
+
+@media(max-width:768px) {
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+    .navbar {
+        padding: 20px;
+    }
+    .navbar ul {
+        display: none;
+    }
+    .hero-buttons {
+        flex-direction: column;
+    }
+}
